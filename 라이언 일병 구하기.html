@@ -1,60 +1,98 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>LHK WORLD - 라이언 일병 구하기</title>
-        <meta charset="utp-8">
+        <title>LHK REVIEW - 라이언 일병 구하기</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <h1>라이언 일병 구하기</h1>
-            <p>
-                <h2>포스터</h2>
-                <img src="라이언 일병 구하기.jpg" width="200">
-            </p>
+        <h1><a href="index.html">LHK REVIEW</a> - 라이언 일병 구하기</h1>
+        <input type="button" value="night" onclick="
+        var target = document.querySelector('body');
+        if(this.value === 'night'){
+            target.style.backgroundColor = 'black';
+            target.style.color = 'white';
+            this.value = 'day';
 
-            <p>
-                <table>
-                    <tr>
-                        <td>장르</td>
-                        <td>전쟁, 드라마</td>
-                    </tr>
-                    <tr>
-                        <td>관객 수</td>
-                        <td>593,681명</td>
-                    </tr>
-                    <tr>
-                        <td>평점</td>
-                        <td>8.0</td>
-                    </tr>
-                </table>
-            </p>
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'powderblue';
+                i = i + 1;
+            }
+        } else{
+            target.style.backgroundColor = 'white';
+            target.style.color = 'black';
+            this.value = 'night';
 
-            <p>
-                <h2>설명</h2>
-                    전쟁 영화의 교과서이자 불후의 명작으로 손꼽히며 스티븐 스필버그에게 두 번째 아카데미 감독상을 안겨준 작품이다. 흥행 면에서도 대성공하였다. 
-                    사실적이면서도 거대한 스케일의 전쟁 묘사는 이후 전쟁 영화들이나 게임 등에 큰 영향을 주었다.
-            </p>
-
-            <p>
-                <h2>리뷰 영상</h2>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/OiGh-HCr5RI?si=kHh2-Bl41YrAFVKp" 
-                    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
-                    gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            </p>
-
-            <p>
-                <h2>댓글</h2>
-                    <div id="disqus_thread"></div>
-                    <script>
-                        (function() { 
-                        var d = document, s = d.createElement('script');
-                        s.src = 'https://lhk-world.disqus.com/embed.js';
-                        s.setAttribute('data-timestamp', +new Date());
-                        (d.head || d.body).appendChild(s);
-                        })();
-                    </script>
-                    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-            </p>
-
+            var alist = document.querySelectorAll('a');
+            var i = 0;
+            while(i < alist.length){
+                alist[i].style.color = 'blue';
+                i = i + 1;
+            }
+        }
+        ">
+        <div id="grid">
+            <div id="navigation">
+                <div>
+                    <h2>목록</h2>
+                        <ul>
+                            <li><a href="라이언 일병 구하기.html">라이언 일병 구하기</a></li>
+                            <li><a href="인턴.html">인턴</a></li>
+                            <li><a href="2001 스페이스 오디세이.html">2001 스페이스 오디세이</a></li>
+                        </ul>
+                </div>
+            </div>
+            <div id="article">
+                <div class="stitleb">
+                    <h2>포스터</h2>
+                    <img src="라이언 일병 구하기.jpg" width="200" style="padding-bottom: 10px;">
+                </div>
+                <div class="stitleb"><!-- 작품 정보 표 -->
+                    <table>
+                        <tr>
+                            <td>장르</td>
+                            <td>전쟁, 드라마</td>
+                        </tr>
+                        <tr>
+                            <td>관객 수</td>
+                            <td>593,681명</td>
+                        </tr>
+                        <tr>
+                            <td>평점</td>
+                            <td>8.0</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="stitleb">
+                    <h2>설명</h2>
+                        <p>스티븐 스필버그 연출, 톰 행크스 주연의 1998년 전쟁 영화. 제 2차 세계대전의 노르망디 상륙작전을 시작으로, 라이언이라는 병사를 구하기 위한 
+                        구출 부대의 여정을 그린다.</p>
+                        <p>전쟁 영화의 교과서이자 불후의 명작으로 손꼽히며 스티븐 스필버그에게 두 번째 아카데미 감독상을 안겨준 작품이다. 흥행 면에서도 대성공하였다. 
+                        사실적이면서도 거대한 스케일의 전쟁 묘사는 이후 전쟁 영화들이나 게임 등에 큰 영향을 주었다.</p>
+                </div>
+                <div class="stitleb">
+                    <h2>리뷰 영상</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/OiGh-HCr5RI?si=kHh2-Bl41YrAFVKp" 
+                        title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; 
+                        gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                <div>
+                    <h2>댓글</h2> 
+                        <div id="disqus_thread"></div>  <!-- 댓글 -->
+                        <script>
+                            (function() { 
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://lhk-world.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                            })();
+                        </script>
+                        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

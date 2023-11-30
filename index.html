@@ -1,37 +1,83 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>WELCOME TO LHK WORLD</title>
+        <title>LHK REVIEW</title>
         <meta charset="utf-8">
+        <link rel="stylesheet" href="istyle.css">
+        <script>
+            function nightDayHandlers(self){
+                var target = document.querySelector('body');
+                if(self.value === 'night'){
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'white';
+                    self.value = 'day';
+
+                    var alist = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < alist.length){
+                        alist[i].style.color = 'powderblue';
+                        i = i + 1;
+                    }
+                } else{
+                    target.style.backgroundColor = 'white';
+                    target.style.color = 'black';
+                    self.value = 'night';
+
+                    var alist = document.querySelectorAll('a');
+                    var i = 0;
+                    while(i < alist.length){
+                        alist[i].style.color = 'blue';
+                        i = i + 1;
+                    }
+                }  
+            }       
+        </script>
     </head>
     <body>
-        <a href="index.html"><h1>LHK WORLD</h1></a>
+        <a href="index.html"><h1>LHK REVIEW - HOME</h1></a>
+        <input type="button" value="night" onclick="
+            nightDayHandlers(this);
+        ">
+        <div id="grid">
+            <div id="navigation">
+                <h2>바로가기</h2>
+                    <ol>
+                        <li><a href="라이언 일병 구하기.html">라이언 일병 구하기</a></li>
+                        <li><a href="인턴.html">인턴</a></li>
+                        <li><a href="2001 스페이스 오디세이.html">2001 스페이스 오디세이</a></li>
+                    </ol>
+                <h2>제작방법</h2>
+                    <ol>
+                        <li><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="HTML5 speicification"> HTML</a></li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ol>
+            </div>
+            <div id="article">
+                <h2>설명</h2>
+                    <p>
+                        <strong>LHK REVIEW</strong>란 다양한 창작물을 리뷰하는 사이트입니다.
+                    </p>
+                <h2>제작자</h2>
+                    <ul>
+                        <li>보개구리</li>
+                    </ul>
+            </div>
+        </div>
 
-        <p><h2>바로가기</h2>
-            <ol>
-                <li><a href="1.html">작품 리뷰</a></li>
-                <li><a href="3.html">작품 목록</a></li>
-            </ol>
-        </p>
-
-        <p><h2>설명</h2>
-            <strong>LHK WORLD</strong>란 다양한 창작물을 리뷰하고 분석하는
-            사이트입니다.
-        </p>
-
-        <p><h2>제작방법</h2>
-            <ol>
-                <li><a href="https://www.w3.org/TR/2011/WD-html5-20110405/" target="_blank" title="HTML5 speicification"> HTML</a></li>
-                <li>CSS</li>
-                <li>JavaScript</li>
-            </ol>
-        </p>
-
-        <p><h3>제작자</h3>
-            <ul>
-                <li>김리현</li>
-            </ul>
-        </p>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+        var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+        (function(){
+            var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+            s1.async=true;
+            s1.src='https://embed.tawk.to/6565900926949f7911357387/1hgabla0f';
+            s1.charset='UTF-8';
+            s1.setAttribute('crossorigin','*');
+            s0.parentNode.insertBefore(s1,s0);
+        })();
+    </script>
+    <!--End of Tawk.to Script-->
 
     </body>
 </html>
